@@ -1,0 +1,46 @@
+******ตั้งชื่อ Database ว่า "dota2" นะครับ*******
+***เปิดกับหน้าจอ 1600*900 และ Browser Google Chrome จะดีที่สุดครับผม***
+
+1.เกี่ยวกับการ INSERT ข้อมูล
+	เมื่อเราทำการ INSERT ข้อมูล (ทีมใหม่) ลงไปในฐานข้อมูลแล้ว เราจำเป็นที่จะต้องนำรูปของทีมนั้นๆ และผู้เล่นทั้ง 5 คนนั้นไปใส่ไว้ที่ Directory ตามนี้
+	- สำหรับรูปทีม ".........\final\public\images" โดยต้องตั้งชื่อรูปทีมให้เป็นชื่อเดียวกับ Team Name ที่ได้กรอกไปตามด้วย 300
+		Example : ชื่อทีม Red_Palace ต้องตั้งชื่อรูปทีมว่า Red_Palace300
+		*รูปทีมต้องมีนามสกุลไฟล์เป็น png*
+	-สำหรับรูปผู้เล่นทั้ 5 คน ".........\final\public\images\ชื่อทีม" โดยต้องตั้งชื่อรูปให้ตรงกับผู้เล่นแต่ละคนที่ได้กรอกไป
+		Example : ชื่อผู้เล่น Chiwy ต้องตั้งชื่อรูปว่า Chiwy
+		*รูปผู้เล่นต้องมีนามสกุลไฟล์เป็น jpg*
+	*ถ้าเกิดไม่มีรูปทีมและผู้เล่น จะทำให้หน้า Show ข้อมูลของทีมต่าง ๆ เพี้ยนไปได้ แต่สำหรับหน้า EDIT&DELETE ยังคงทำได้เหมือนเดิมครับ*
+
+2.เกี่ยวกับการ SEARCH ข้อมูล
+	เนื่องจากข้อมูลต่างๆ ที่ผม INSERT เข้าไปตั้งแต่ต้นนั้น จะใช้ _ แทน Spacebar ทั้งหมด ทำให้เวลาที่จะค้นหาข้อมูลเดิมนั้นก็ต้อง SEARCH ด้วยการใช้ _ แทน Spacebar เช่นกัน
+	แต่สำหรับข้อมูลใหม่ที่แอดเพิ่มเข้าไปสามารถใช้ Spacebar ได้ตามปกติทั้งการ INSERT และ SEARCH
+
+3.ข้อมูลตัวอย่างที่สามารถนำไปใช้ INSERT เป็นดูความเป็นไปของ DATABASE ได้คือ
+
+insert into Dota2_Team values('Red_Palace','4/0/2',15,'TU','ADDTOLIST','Carry','Kepler','Midlane','ALWAYSWANNADIE','Offlane','ForgiveMePlz','Ganker','Chiwy','Support');
+
+หรือจะกรอกในแบบฟอร์ม INSERT ก็ได้เช่นกัน
+
+Team Name : Red Palace
+
+Matches Play : 4/0/2
+
+Ranking : 16
+
+Sponsor : TU
+
+Player Name (1) : ADDTOLIST
+Role (1) : Carry
+
+Player Name (2) : Kepler
+Role (2) : Midlane
+
+Player Name (3) : ALWAYSWANNADIE
+Role (3) : Offlane
+
+Player Name (4) : ForgiveMePlz
+Role (4) : Ganker
+
+Player Name (5) : Chiwy
+Role (5) : Support
+	
